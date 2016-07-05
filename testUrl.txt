@@ -1,0 +1,63 @@
+
+添加用户测试地址
+http://localhost:6060/coqamcapp/npl/userMng/save?userName=135000&realName=test001&password=123&telephone=133&state=1&departId=14&roleId=8&email=sdfk@qq.com
+
+登录测试地址
+http://localhost:6060/coqamcapp/login
+
+设置模块，获取登陆用户信息
+http://localhost:6060/coqamcapp/npl/userMng/findCurrentUser
+设置模块，修改用户信息
+http://localhost:6060/coqamcapp/npl/userMng/designUser/inputPwd=111&firstPwd=222&secondPwd=333
+http://localhost:6060/coqamcapp/npl/userMng/designUser?inputPwd=123&firstPwd=222&secondPwd=222&id=6280fea6-abcb-4f93-b1f1-dd2153789056&telephone=1111111111&email=aaaa@aa.com&realName=zzzzzzz
+
+字典测试地址
+http://localhost:6060/coqamcapp/npl/dict/getDictDetailByValue/1/1
+
+资产管理----担保信息
+http://localhost:6060/coqamcapp/npl/cell/assurer/findPawnList?id=2
+http://localhost:6060/coqamcapp/npl/cell/assurer/findPawnBaseInfo?id=2
+http://localhost:6060/coqamcapp/npl/cell/assurer/findPawnTypeInfo?pawnType=1&id=2
+localhost:6060/coqamcapp/npl/cell/assurer/findPawnPreserveInfo?id=2
+
+<script>var $$ctx = '${ctx}';var $$res = '${res}';</script>
+
+资产处置
+http://localhost:6060/coqamcapp/npl/disposal/plan/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- inline scripts related to this page -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$("#login-btn").click(function() {
+					$("#login-form").ajaxSubmit(function(result) {
+						if (result.success) {
+							window.location.href = "${ctx}/index";
+						} else {
+							alert("用户名或密码不正确！");	
+						}
+					});
+				});
+			});
+		</script>
